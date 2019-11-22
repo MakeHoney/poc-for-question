@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: demoSupplier
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        demoSupplier-out-0:
+          destination: makehoney
+          contentType: application/json
+
+server.port: 7777
